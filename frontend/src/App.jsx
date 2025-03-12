@@ -9,7 +9,7 @@ export default function App() {
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
-    fetch("https://quize-bay.vercel.app/api/questions")
+    fetch("https://quize-eosin.vercel.app/api/questions")
       .then((res) => res.json())
       .then((data) => setQuestions(data));
   }, []);
@@ -19,7 +19,7 @@ export default function App() {
   };
 
   const submitQuiz = () => {
-    fetch("https://quize-bay.vercel.app/api/submit", {
+    fetch("https://quize-eosin.vercel.app/api/submit", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ answers: Object.entries(answers).map(([id, answer]) => ({ id: Number(id), answer })) }),
