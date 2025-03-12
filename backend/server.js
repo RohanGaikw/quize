@@ -25,6 +25,9 @@ const questions = [
 app.get('/api/questions', (req, res) => {
     res.json(questions.map(q => ({ id: q.id, question: q.question, options: q.options })));
 });
+app.get("/", (req, res) => {
+    res.send("Quiz API is Running!");
+});
 
 // API to check answers
 app.post('/api/submit', (req, res) => {
