@@ -29,6 +29,11 @@ app.get("/", (req, res) => {
     res.send("Quiz API is Running!");
 });
 
+app.get("/", (req, res) => {
+    res.send("Quiz API is Running!");
+});
+
+
 // API to check answers
 app.post('/api/submit', (req, res) => {
     const userAnswers = req.body.answers;
